@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Sistema Solar</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+  <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/estrelas-ceu.css">
+  <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Anton|Varela+Round" rel="stylesheet">
+</head>
+<body>
+  <style type="text/css">
+</style>
+
+<section class="animacao">
+<!-- 	<div class="terra">
+		<div class="lua">
+			<div class="luadalua"></div>
+		</div> -->
+
+    <section class="inicio">
+      <div class="sputnik"><img src="img/sputnik.png"></div>
+      <h1 class="titulo"><span>SISTEMA</span> SOLAR</h1>
+      <div class="earth"></div>
+      <div class="orbit-earth"></div>
+      <div class="nave-earth">
+        <img src="img/satelite.png">
+      </div>
+      <div class="orbita"></div>
+      <div class="nave"></div>
+      <div class="placa-iniciar">
+        <img src="img/placa.png">
+        <button class="iniciar">INICIAR</button>   
+      </div> 
+      <div id="stars"></div>
+      <div id="stars2"></div>
+      <div id="stars3"></div>
+    </section>  
+
+    <section class="sistema-solar">
+      <div id="stars"></div>
+      <div id="stars2"></div>
+      <div id="stars3"></div>
+
+      <div class="sol"></div>
+      <ul class="orbita">
+        <li><img src="img/mercurio.png"></div></li>
+        <li></li>
+
+        <li><img src="img/venus.png"></div></li>
+        <li></li>
+
+        <li><img src="img/earth.png"></div></li>
+        <li></li>
+
+        <li><img src="img/marte.png"></div></li>
+        <li></li>
+
+        <li><img src="img/jupiter.png"></div></li>
+        <li></li>
+
+        <li><img src="img/saturno.png"></div></li>
+        <li></li>
+
+        <li><img src="img/urano.png"></div></li>
+        <li></li>
+
+        <li><img src="img/netuno.png"></div></li>
+        <li></li>
+      </ul>
+    </section>
+
+    <section class="mercurio">
+      <h1  class="h-planeta">MERCÚRIO</h1>
+      <div class="planeta"></div>
+      <ul class="lista-blocos-texto">
+        <li>
+          <div class="quadrado"></div>
+          <div class="quadrado-sombra">
+            <div class="texto">
+              <span>Mercúrio</span> é o planeta mais próximo do sol, o que faz dele muito quente, chegando a temperaturas de 427°C.
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="venus">
+      <h1  class="h-planeta">VÊNUS</h1>
+      <div class="planeta"></div>
+      <ul class="lista-blocos-texto">
+        <li>
+          <div class="quadrado"></div>
+          <div class="quadrado-sombra">
+            <div class="texto">
+              <span>Vênus</span>, devido à alta pressão em sua atmosfera, que possui densidade 90 vezes maior do que a da Terra, chega a temperaturas de até 464°C.
+            </div>
+          </div>
+        </li>
+
+      </ul>
+    </section>
+
+    <section class="terra">
+      <h1  class="h-planeta">TERRA</h1>
+      <div class="planeta"></div>
+      <ul class="lista-blocos-texto">
+        <li>
+          <div class="quadrado"></div>
+          <div class="quadrado-sombra">
+            <div class="texto">
+              <span>Terra</span> possui diâmetro de 12.756 Km, levando exatos 365,256 dias para dar um giro completo em torno do sol.
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="marte">
+      <h1  class="h-planeta">MARTE</h1>
+      <div class="planeta"></div>
+      <ul class="lista-blocos-texto">
+        <li>
+          <div class="quadrado"></div>
+          <div class="quadrado-sombra">
+            <div class="texto">
+              <span>Marte</span> possui atmosfera composta por dióxido de carbono (95,32%), muito seca e fria, o que justifica o fato de não possuir água na forma líquida.
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="jupiter">
+      <h1  class="h-planeta">JUPITER</h1>
+      <div class="planeta"></div>
+      <ul class="lista-blocos-texto">
+        <li>
+          <div class="quadrado"></div>
+          <div class="quadrado-sombra">
+            <div class="texto">
+              <span>Jupiter</span> é um gigante gasoso, o maior planeta do sistema solar. Ele libera três vezes mais energia do que recebe do sol.
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="saturno">
+      <h1  class="h-planeta">SATURNO</h1>
+      <div class="planeta"></div>
+      <img src="img/anel-saturno.png" class="aneis">
+      <ul class="lista-blocos-texto">
+        <li>
+          <div class="quadrado"></div>
+          <div class="quadrado-sombra">
+            <div class="texto">
+              <span>Saturno</span> é o segundo maior planeta do sistema solar, famoso por possuir vários anéis constituídos de gelo, poeira e material rochoso.
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="urano">
+      <h1  class="h-planeta">URANO</h1>
+      <div class="planeta"></div>
+      <ul class="lista-blocos-texto">
+        <li>
+          <div class="quadrado"></div>
+          <div class="quadrado-sombra">
+            <div class="texto">
+              <span>Urano</span> possui seu eixo de rotação inclinado em 82,5°. Sua atmosfera chega a temperaturas de -224C° e seus ventos alcançam até 900km/h.
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="netuno">
+      <h1  class="h-planeta">NETUNO</h1>
+      <div class="planeta"></div>
+      <ul class="lista-blocos-texto">
+        <li>
+          <div class="quadrado"></div>
+          <div class="quadrado-sombra">
+            <div class="texto">
+              <span>Netuno</span> é o último planeta gasoso do sitema solar, possuindo uma temperatura média de -116°C, onde a mínima pode chegar a -193°C.
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+  </section>
+
+  <section class="intro">
+    <h1 class="pisca">Prepare-se para o <span class="letra">QUIZ</span></h1>
+    <p> <span class="segundo">3</span></p>
+  </section>
+
+  <section class="questionario">
+
+    <div class="pergunta1">
+      <h1>Quiz</h1>
+      <p>Pergunta 1</p>
+      <p class="pergunta1">Qual dos planetas abaixo se encontra mais próximo ao sol?</p>
+      <ul>
+        <li class="plan" data-id="0"> <img src="img/venus.png"></li>
+        <li class="plan" data-id="1"> <img src="img/jupiter.png"></li>
+        <li class="plan" data-id="2"> <img src="img/mercurio.png"></li>
+        <li class="plan" data-id="3"> <img src="img/marte.png"></li>
+      </ul>
+      
+
+    </div>
+
+    <div class="pergunta2">
+      <h1>Quiz</h1>
+      <p>Pergunta 2</p>
+      <p class="pergunta2">Qual o maior planeta do sistema solar?</p>
+      <ul>
+        <li class="plan" data-id="0"><img src="img/earth.png"></li>
+        <li class="plan" data-id="2"><img src="img/jupiter.png"></li>
+        <li class="plan" data-id="1"><img src="img/mercurio.png"></li> 
+        <li class="plan" data-id="3"><img src="img/netuno.png"></li>
+      </ul>
+    </div>
+
+    <div class="pergunta3">
+      <h1>Quiz</h1>
+      <p>Pergunta 3</p>
+      <p class="pergunta3">O Planeta Terra tem aproximadamente quantos bilhões de anos ?</p>
+      <label class="plan" data-id="0"> <input  type="radio" name="sexo">8,5 bilhões de anos</label>
+      <label class="plan" data-id="1"> <input  type="radio" name="sexo">9 bilhões de anos</label>
+      <label class="plan" data-id="2"> <input  type="radio" name="sexo">4 bilhões de anos</label>
+      <label class="plan" data-id="3"> <input  type="radio" name="sexo">7 bilhões de anos</label>
+
+
+    </div>
+
+    <div class="pergunta4">
+      <h1>Quiz</h1>
+      <p>Pergunta 4</p>
+      <p class="pergunta4">Qual planeta possui inclinação de 83% em seu eixo?</p>
+      <ul>
+        <li class="plan" data-id="0"> <img src="img/marte.png"></li>
+        <li class="plan" data-id="2"> <img src="img/urano.png"></li>
+        <li class="plan" data-id="1"> <img src="img/netuno.png"></li>
+        <li class="plan" data-id="3"> <img src="img/saturno.png"></li>
+      </ul>
+
+    </div>
+
+    <div class="final">
+      <h1>FIM DO QUESTIONÁRIO</h1>
+      <p>Você conseguiu <span class="acertos">0</span> pontos</p>
+      <button class="reiniciar"> REINICIAR </button>
+
+    </div>
+
+  </section>
+
+</section>
+
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/easy.js"></script>
+<script src="js/embaralhar-itens.js"></script>
+<script src="js/jquerytouchswipe.js"></script>
+<script>
+
+  musica = new Audio("audio/Epic Technology Full Version.mp3");
+  musicaLoop = new Audio("audio/Epic Technology Loop Version.wav");
+  
+//embaralhar itens
+//$(itens).shuffle();
+
+//easy na animação
+//$(item).animate({propriedades},tempo,easy,callback);
+
+//swipe
+// $("div").swipe({
+// 	swipe:function(event, direction) {
+//       console.log(direction);
+//     }
+// });
+musica.loop = true;
+musica.play();
+$("button.iniciar").on("click", function(){
+
+
+  $("section.inicio").hide();
+  // $("section.sistema-solar").show();
+  $("section.mercurio").show();
+
+  // $("section.mercurio ul li").eq(0).animate({"margin-left":"10vw"},1000).delay(4000).animate({"margin-left":"-100vw"},1000);
+  // $("section.mercurio ul li").eq(1).delay(6000).animate({"margin-left":"10vw"},1000).delay(4000).animate({"margin-left":"-100vw"},1000);
+  // $("section.mercurio ul li").eq(2).delay(12000).animate({"margin-left":"10vw"},1000).delay(4000).animate({"margin-left":"-100vw"},1000);
+
+  // palavras = ["mercurio", "venus"]
+  // for (var i = 0; i < 2; i++) {
+  //   console.log(palavras[i]);
+  //    $("section."+palavras[i]).animate({"left":"0"},1000, chamarPlaneta(palavras[i])).delay(18000).animate({"left":"-100vw"},1000);
+  // }
+
+  var tempo = 7500; //7500
+  var outroTempo = 6500; //6500
+
+  $("section.mercurio").css({left:"0"}).animate({"left":"0"},1000, chamarPlaneta("mercurio")).delay(outroTempo).animate({"left":"-100vw"},1000);
+  setTimeout(function(){
+    $("section.venus").css({left:"100vw"}).animate({"left":"0"},1000, chamarPlaneta("venus")).delay(outroTempo).animate({"left":"-100vw"},1000);
+  }, tempo);
+  setTimeout(function(){
+    $("section.terra").css({left:"100vw"}).animate({"left":"0"},1000, chamarPlaneta("terra")).delay(outroTempo).animate({"left":"-100vw"},1000);
+  }, tempo*2);
+  setTimeout(function(){
+    $("section.marte").css({left:"100vw"}).animate({"left":"0"},1000, chamarPlaneta("marte")).delay(outroTempo).animate({"left":"-100vw"},1000);
+  }, tempo*3);
+  setTimeout(function(){
+    $("section.jupiter").css({left:"100vw"}).animate({"left":"0"},1000, chamarPlaneta("jupiter")).delay(outroTempo).animate({"left":"-100vw"},1000);
+  }, tempo*4);
+  setTimeout(function(){
+    $("section.saturno img.aneis").animate({"left":"-22vw"},1000);
+    $("section.saturno").css({left:"100vw"}).animate({"left":"0"},1000, chamarPlaneta("saturno")).delay(outroTempo).animate({"left":"-100vw"},1000, anelSaida());
+  }, tempo*5);
+  setTimeout(function(){
+    $("section.urano").css({left:"100vw"}).animate({"left":"0"},1000, chamarPlaneta("urano")).delay(outroTempo).animate({"left":"-100vw"},1000);
+  }, tempo*6);
+  setTimeout(function(){
+    $("section.netuno").animate({"left":"0"},1000, chamarPlaneta("netuno")).delay(outroTempo).animate({"opacity":"0"},1000);
+    $("section.sistema-solar").delay(outroTempo).animate({"opacity":"1"}, 1000).delay(6000).animate({"opacity":"0"}, 1000, function(){
+      /*CHAMA O QUESTIONÁRIO =============================================================================================*/
+      $("section.intro").css({"opacity":1})
+      $("section.intro").animate({"top":"0"},150, function(){
+        ligar();
+        setTimeout(function(){$("section.intro p .segundo").text(3)},150);
+        setTimeout(function(){$("section.intro p .segundo").text(2)},1150);
+        setTimeout(function(){$("section.intro p .segundo").text(1)},2150);
+        setTimeout(function(){$("section.intro p .segundo").text("VAI!")},3150);
+        setTimeout(function(){
+          $("section.intro").animate({opacity:0});
+          $("section.questionario").show().animate({opacity:1});
+          $("section.intro p .segundo").text(3);
+        },3500);
+      });
+
+    });
+
+  }, tempo*7);
+})
+
+function chamarPlaneta(planeta){
+  $("section."+planeta+" ul li").eq(0).animate({"margin-left":"10vw"},1000).delay(6000).animate({"margin-left":"-100vw"},1000);
+  // $("section."+planeta+" ul li").eq(1).delay(6000).animate({"margin-left":"10vw"},1000).delay(4000).animate({"margin-left":"-100vw"},1000);
+  // $("section."+planeta+" ul li").eq(2).delay(12000).animate({"margin-left":"10vw"},1000).delay(4000)/*.animate({"margin-left":"-100vw"},1000)*/;
+}
+function anelSaida() {
+  $("section.saturno img.aneis").delay(6500).animate({"left":"-200vw"},1500);
+}
+
+var planetinha = $(".plan");
+var contLista = 1;
+var pontos = $(".acertos");
+var questionario = $(".questionario");
+var reiniciar =$("button.reiniciar");
+
+
+
+planetinha.on("click", function(){
+
+  $(".questionario div").css({"display":"none"});
+  $(".questionario div").eq(contLista).css({"display":"block"}).animate({"left":"0"});
+
+  contLista++;
+
+  if(contLista==5){
+    $(".questionario div.final p span.acertos").text(pontos.text());
+  }
+
+  var idplaneta = $(this).data("id");
+
+  if(idplaneta==2){
+    pontos.text(parseInt(pontos.text())+1);
+  }
+
+});
+
+reiniciar.on("click", function(){
+  $("section.questionario").hide();
+  $("section.inicio").show();
+  contLista =0;
+  pontos = 0;
+  $(".questionario div").eq(0).css({"display":"block"}).animate({"left":"0"});
+});
+
+function ligar(){
+  ligado = setInterval(function(){
+    $("h1.pisca").animate({opacity:"0.5"});
+    apagar();
+    clearInterval(ligado);
+  },600)
+}
+
+function apagar(){
+  apagado = setInterval(function(){
+    $("h1.pisca").animate({opacity:"2"});
+    ligar();
+    clearInterval(apagado);
+  },600)
+}
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

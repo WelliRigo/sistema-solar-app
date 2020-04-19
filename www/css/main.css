@@ -1,0 +1,799 @@
+@font-face {
+  font-family: futura;
+  src: url(../fonts/LTe50152.woff);
+}
+
+/* Declaração de variáveis*/
+:root{
+  --valor-inicial: 50vw;
+  --distancia: 20vw;
+}
+/*calc(var(--two) + 20px);*/
+
+/* Responsividade em fontes */
+html { font-size: calc(1em + 1vw); }
+
+body section.animacao{
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  /*background: #21396c;*/
+  background: radial-gradient(circle,rgb(81,140,148), rgb(19,33,65));
+  /*background: url("../img/bg-main.png") repeat;*/
+}
+
+/*============== TELA INICIAL ============*/
+section.inicio div.sputnik{
+  position: absolute;
+  width: 165vw;
+  left: -40vw;
+  top: 5vh;
+}
+section.inicio div.sputnik img{
+  width: 25vw;
+  margin-left: 165vw; /*0 até 165*/
+  animation: sputnik-passando 20s linear infinite;
+}
+@keyframes sputnik-passando{
+  from{margin-left: 0;}
+  to{margin-left: 500vw;}
+}
+
+section.inicio h1.titulo{
+  position: absolute;
+  top: 10%;
+  left: 0;
+  right: 0;
+  color: #00C6FF;
+  text-align: center;
+  font-family: "lato", sans-serif;
+  font-weight: 400;
+  font-size: 80px;
+  letter-spacing: 10px;
+  margin-top: -60px;
+  padding-left: 10px;
+  /*background: -webkit-linear-gradient(yellow, #38495a);*/
+  background: #00C6FF;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  box-shadow: 10px solid black;
+}
+section.inicio h1.titulo span{
+  font-size: 50px;
+}
+section.inicio div.earth{
+  position: absolute;
+  width: 80vw;
+  height: 80vw;
+  /*background: url("../img/earth.png");*/
+  background-image: radial-gradient( rgba(255, 255, 255, 0) 0, white 1000%), url("../img/earth.png");
+  background-size: cover;
+  margin: auto;
+  top: 30vh;
+  bottom: 0;
+  left: 60vw;
+  right: 0;
+  border-radius: 50%;
+  animation: rotacao 10s linear infinite;
+  z-index: 2;
+  box-shadow: 0 0 30vw rgba(255,255,255,0.3);
+}
+@keyframes rotacao{
+from{background-position: 0%;/*transform: rotate(360deg);*/}
+to{background-position: 200%;}
+}
+section.inicio div.orbit-earth, section.inicio div.nave-earth{
+  width: 120vw;
+  height: 120vw;
+  background: none;
+  position: absolute;
+  top: 30vh;
+  bottom: 0;
+  left: 40vw;
+  right: 0;
+  margin: auto;
+  z-index: 3;
+  border-radius: 50%;
+}
+section.inicio div.orbit-earth{
+  border: 2px white dashed;
+}
+section.inicio div.nave-earth{
+  animation: orbita 10s linear infinite;
+}
+section.inicio div.nave-earth img{
+ height: 12vh;
+ margin-top: 20%;
+}
+@keyframes orbita{
+  from{transform: rotate(360deg);}
+}
+section.inicio div.placa-iniciar img{
+  position: absolute;
+  bottom: -1vh;
+  left: 2vw;
+  z-index: 4;
+  width: 40vw;
+  transform: rotate(0deg);
+  animation: botao-animado 3s linear infinite;
+}
+section.inicio button.iniciar{
+  transform: rotate(0deg);
+  width: 40vw;
+  position: absolute; 
+  top: 79.5vh;
+  height: 13vh;
+  left: 2vw;
+  font-family: "lato";
+  font-size: 1.7em;
+  /*text-shadow: 1px 1px rgba(0,0,0,0.0);*/
+  z-index: 5;
+  background: none;
+  border: none;
+  color: #006b8a;
+  animation: botao-animado 3s linear infinite;
+}
+@keyframes botao-animado{
+  0%{transform: rotate(0deg);}
+  25%{transform: rotate(3deg);}
+  50%{transform: rotate(0deg);}
+  75%{transform: rotate(-3deg);}
+  100%{transform: rotate(0deg);}
+}
+
+
+/* ======   SISTEMA SOLAR =========*/
+section.sistema-solar{
+  /*display: none;*/
+  opacity: 0;
+  width: 200vw;
+  height: 100vh;
+  position: absolute;
+  left: -80vw;
+}
+section.sistema-solar div.sol{
+  background: url("../img/sol.png");
+  width: 30vw;
+  background-size: cover;
+  height: 30vw;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+section.sistema-solar ul.orbita, section.sistema-solar ul.orbita li{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+section.sistema-solar ul.orbita li img{
+  border-radius: 50%;
+  height: 10vw;
+  width: 10vw;
+}
+section.sistema-solar ul.orbita li:nth-child(1){
+  width: 50vw;
+  height: 50vw;
+  animation: orbita 3s linear infinite;
+}
+section.sistema-solar ul.orbita li:nth-child(2){
+  width: calc(var(--valor-inicial) + 0vw);
+  height: 50vw;
+  background: none;
+  border: 1px white dashed;
+  border-radius: 50%;
+}
+section.sistema-solar ul.orbita li:nth-child(1) img{
+  width: 10vw;
+  position: absolute;
+  top: 40%;
+  left: -5vw;
+  z-index: 20;
+}
+
+section.sistema-solar ul.orbita li:nth-child(3){
+  width: calc(var(--valor-inicial) + var(--distancia));
+  height: calc(var(--valor-inicial) + var(--distancia));
+  animation: orbita 5s linear infinite;
+}
+section.sistema-solar ul.orbita li:nth-child(4){
+  width: 70vw;
+  height: 70vw;
+  background: none;
+  border: 1px white dashed;
+  border-radius: 50%;
+}
+section.sistema-solar ul.orbita li:nth-child(3) img{
+  width: 10vw;
+  position: absolute;
+  top: 40%;
+  left: -5vw;
+  z-index: 20;
+}
+
+section.sistema-solar ul.orbita li:nth-child(5){
+  width: calc(var(--valor-inicial) + 2*var(--distancia));
+  height: calc(var(--valor-inicial) + 2*var(--distancia));
+  animation: orbita 6s linear infinite;
+}
+section.sistema-solar ul.orbita li:nth-child(6){
+  width: calc(var(--valor-inicial) + 2*var(--distancia));
+  height: calc(var(--valor-inicial) + 2*var(--distancia));
+  background: none;
+  border: 1px white dashed;
+  border-radius: 50%;
+}
+section.sistema-solar ul.orbita li:nth-child(5) img{
+  width: 10vw;
+  position: absolute;
+  top: 40%;
+  left: -5vw;
+  z-index: 20;
+}
+
+section.sistema-solar ul.orbita li:nth-child(7){
+  position: absolute;
+  left: 0;
+  width: calc(var(--valor-inicial) + 3*var(--distancia));
+  height: calc(var(--valor-inicial) + 3*var(--distancia));
+  animation: orbita 7s linear infinite;
+}
+section.sistema-solar ul.orbita li:nth-child(8){
+  width: calc(var(--valor-inicial) + 3*var(--distancia));
+  height: calc(var(--valor-inicial) + 3*var(--distancia));
+  background: none;
+  border: 1px white dashed;
+  border-radius: 50%;
+}
+section.sistema-solar ul.orbita li:nth-child(7) img{
+  width: 10vw;
+  position: absolute;
+  top: 40%;
+  left: -5vw;
+  z-index: 20;
+}
+
+section.sistema-solar ul.orbita li:nth-child(9){
+  position: absolute;
+  left: 0;
+  width: calc(var(--valor-inicial) + 4*var(--distancia));
+  height: calc(var(--valor-inicial) + 4*var(--distancia));
+  animation: orbita 8s linear infinite;
+}
+section.sistema-solar ul.orbita li:nth-child(10){
+  width: calc(var(--valor-inicial) + 4*var(--distancia));
+  height: calc(var(--valor-inicial) + 4*var(--distancia));
+  background: none;
+  border: 1px white dashed;
+  border-radius: 50%;
+}
+section.sistema-solar ul.orbita li:nth-child(9) img{
+  width: 10vw;
+  position: absolute;
+  top: 40%;
+  left: -5vw;
+  z-index: 20;
+}
+
+section.sistema-solar ul.orbita li:nth-child(11){
+  position: absolute;
+  left: 0;
+  width: calc(var(--valor-inicial) + 5*var(--distancia));
+  height: calc(var(--valor-inicial) + 5*var(--distancia));
+  animation: orbita 9s linear infinite;
+}
+section.sistema-solar ul.orbita li:nth-child(12){
+  width: calc(var(--valor-inicial) + 5*var(--distancia));
+  height: calc(var(--valor-inicial) + 5*var(--distancia));
+  background: none;
+  border: 1px white dashed;
+  border-radius: 50%;
+}
+section.sistema-solar ul.orbita li:nth-child(11) img{
+  width: 10vw;
+  position: absolute;
+  top: 40%;
+  left: -5vw;
+  z-index: 20;
+}
+
+section.sistema-solar ul.orbita li:nth-child(13){
+  position: absolute;
+  left: 0;
+  width: calc(var(--valor-inicial) + 6*var(--distancia));
+  height: calc(var(--valor-inicial) + 6*var(--distancia));
+  animation: orbita 10s linear infinite;
+}
+section.sistema-solar ul.orbita li:nth-child(14){
+  width: calc(var(--valor-inicial) + 6*var(--distancia));
+  height: calc(var(--valor-inicial) + 6*var(--distancia));
+  background: none;
+  border: 1px white dashed;
+  border-radius: 50%;
+}
+section.sistema-solar ul.orbita li:nth-child(13) img{
+  width: 10vw;
+  position: absolute;
+  top: 40%;
+  left: -5vw;
+  z-index: 20;
+}
+
+section.sistema-solar ul.orbita li:nth-child(15){
+  position: absolute;
+  left: 0;
+  width: calc(var(--valor-inicial) + 7*var(--distancia));
+  height: calc(var(--valor-inicial) + 7*var(--distancia));
+  animation: orbita 11s linear infinite;
+}
+section.sistema-solar ul.orbita li:nth-child(16){
+  width: calc(var(--valor-inicial) + 7*var(--distancia));
+  height: calc(var(--valor-inicial) + 7*var(--distancia));
+  background: none;
+  border: 1px white dashed;
+  border-radius: 50%;
+}
+section.sistema-solar ul.orbita li:nth-child(15) img{
+  width: 10vw;
+  position: absolute;
+  top: 40%;
+  left: -5vw;
+  z-index: 20;
+}
+
+section.mercurio{
+  background: url("../img/bg-main.png") repeat;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  position: absolute;
+}
+h1.h-planeta{
+  position: absolute;
+  top: 15%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-family: "lato", sans-serif;
+  font-weight: 400;
+  font-size: 2em;
+  letter-spacing: 10px;
+  margin-top: -60px;
+  /*background: -webkit-linear-gradient(yellow, #38495a);*/
+  background: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  box-shadow: 10px solid black;
+}
+div.planeta{
+  position: absolute;
+  width: 50vw;
+  height: 50vw;
+  background-image: radial-gradient( rgba(255, 255, 255, 0) 0, white 1000%), url("../img/mercurio.png");
+  background-size: cover;
+  margin: auto;
+  top: 60vh;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 50%;
+  animation: rotacao 10s linear infinite;
+  z-index: 2;
+  box-shadow: 0 0 30vw rgba(255,255,255,0.3);
+}
+@keyframes rotacao{
+from{background-position: 0%;/*transform: rotate(360deg);*/}
+to{background-position: 200%;}
+}
+div.quadrado, div.quadrado-sombra{
+  position: absolute;
+  top: 20vh;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 80vw;
+  height: 50vw;
+  border: 3px solid white;
+  /*transform: rotate(45deg)*/
+}
+div.quadrado{
+  background: rgba(255,255,255, 0.2);
+  animation:  pulsate-big 0.8s ease-out 0.5s infinite alternate none running;
+}
+div.quadrado-sombra{
+  background: none;
+  animation: pulsate 0.8s ease-out 0s infinite alternate none running;
+  font-family: open sans;
+  color: white;
+}
+.mercurio .texto{
+  font-size: 1.19em;
+}
+.marte .texto{
+  font-size: 0.9em;
+}
+.terra .texto{
+ font-size: 1.2em;
+}
+div.texto{
+  padding: 2vw;
+  text-align: center;
+  font-size: 1em;
+  line-height: 5vh;
+  font-family: futura;
+}
+
+ul.lista-blocos-texto li:nth-child(1){
+  position: absolute;
+  margin-left: 10vw;
+}
+ul.lista-blocos-texto li:nth-child(2){
+  position: absolute;
+  margin-left: 110vw;
+}
+ul.lista-blocos-texto li:nth-child(3){
+  position: absolute;
+  margin-left: 210vw;
+}
+@keyframes pulsate-big{
+  0% {
+    box-shadow: 0 0 0 0px rgba(254,254,254,0.07);
+  }
+  100% {
+    box-shadow: 0 0 0 20px rgba(254,254,254,0.07);
+  }
+}
+@keyframes pulsate{
+  from{
+    box-shadow:0 0 0 0px rgba(254,254,254,0.07)
+  }
+  to{
+    box-shadow:0 0 0 13px rgba(254,254,254,0.07)
+  }
+}
+
+section.venus, section.terra, section.marte, section.jupiter, section.saturno, section.urano, section.netuno{
+  background: url("../img/bg-main.png") repeat;
+  width: 100vw;
+  height: 100vh;
+  /*display: none;*/
+  position: absolute;
+  left: 100vw;
+}
+section.venus div.planeta{
+  background-image: radial-gradient( rgba(255, 255, 255, 0) 0, white 1000%), url("../img/venus.png");
+  background-size: cover;
+}
+section.terra div.planeta{
+  background-image: radial-gradient( rgba(255, 255, 255, 0) 0, white 1000%), url("../img/earth.png");
+  background-size: cover;
+}
+section.marte div.planeta{
+  background-image: radial-gradient( rgba(255, 255, 255, 0) 0, white 1000%), url("../img/marte.png");
+  background-size: cover;
+}
+section.jupiter div.planeta{
+  background-image: radial-gradient( rgba(255, 255, 255, 0) 0, white 1000%), url("../img/jupiter.png");
+  background-size: cover;
+}
+section.saturno div.planeta{
+  background-image: radial-gradient( rgba(255, 255, 255, 0) 0, white 1000%), url("../img/saturno.png");
+  background-size: cover;
+  width: 70vw;
+  height: 70vw;
+  top: 50vh;
+}
+section.urano div.planeta{
+  background-image: radial-gradient( rgba(255, 255, 255, 0) 0, white 1000%), url("../img/urano.png");
+  background-size: cover;
+}
+section.netuno div.planeta{
+  background-image: radial-gradient( rgba(255, 255, 255, 0) 0, white 1000%), url("../img/netuno.png");
+  background-size: cover;
+}
+section.saturno img.aneis{
+  position: absolute;
+  width: 142vw;
+  top: 65vh;
+  /*left: -22vw;*/
+  left: 100vw;
+  z-index: 50;
+  transform: rotate(10deg)
+
+}
+
+section.intro{
+  background: url("../img/bg-main.png") repeat;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+
+}
+
+section.intro h1.pisca{
+  font-family: 'Anton';
+  margin-top: 20vw;
+  color: #bdc3c7;
+  text-align: center;
+  font-size: 3em;
+  line-height: 2em;
+}
+
+
+section.intro p{
+  color: #bdc3c7;
+  text-align: center;
+  font-size: 5em;
+  line-height: 2em;
+  font-weight: bold;
+}
+
+section.questionario{
+  display: none;
+  background: url("../img/bg-main.png") repeat;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  opacity: 0;
+}
+
+
+
+div.pergunta1{
+  height: 100%;
+  width: 100%;
+  color: #bdc3c7;
+  font-size: 2em;
+  letter-spacing: 0.1em;
+  text-align: center;
+  font-family: futura;
+
+}
+
+div.pergunta1 ul{
+  display: flex;
+  width: 70%;
+  flex-wrap: wrap;
+  margin: 10vw 20vw 10vw 25vw;
+
+
+}
+
+
+div.pergunta1 img{
+  border-radius: 50%;
+  width: 20vw;
+  height: 20vw;
+  box-shadow: 0 0 30vw rgba(255,255,255,0.3);
+  margin: 0 8vw 15vw 2vw;
+
+}
+
+div.pergunta1 h1{
+  text-align: center;
+  font-size: 2em;
+  line-height: 2em;
+  letter-spacing: 0.1em;
+
+}
+
+div.pergunta1 p.pergunta1{
+  font-size: 6vw;
+  letter-spacing: 0.1em;
+  line-height: 2em;
+  margin-top: 10vw;
+
+}
+
+
+
+div.pergunta2{
+  display: none;
+  color: black;
+  font-size: 2em;
+  letter-spacing: 0.1em;
+  text-align: center;
+  font-family: futura;
+
+
+}
+
+div.pergunta2 h1{
+  color: #bdc3c7;
+  text-align: center;
+  font-size: 2em;
+  line-height: 2em;
+  letter-spacing: 0.1em;
+
+}
+
+div.pergunta2 img{
+  border-radius: 50%;
+  width: 20vw;
+  height: 20vw;
+  box-shadow: 0 0 30vw rgba(255,255,255,0.3);
+  margin: 0 8vw 15vw 2vw;
+
+}
+
+div.pergunta2 ul{
+  display: flex;
+  width: 70%;
+  flex-wrap: wrap;
+  margin: 10vw 20vw 10vw 25vw;
+
+
+}
+
+div.pergunta2 p{
+  color: #bdc3c7;
+}
+
+
+div.pergunta2 p.pergunta2{
+  color: #bdc3c7;
+  font-size: 6vw;
+  letter-spacing: 0.1em;
+  line-height: 2em;
+  margin-top: 10vw;
+
+}
+
+
+
+div.pergunta3{
+  display: none;
+  color: black;
+  font-size: 2em;
+  letter-spacing: 0.1em;
+  text-align: center;
+  font-family: futura;
+
+
+}
+
+div.pergunta3 h1{
+  color: #bdc3c7;
+  text-align: center;
+  font-size: 2em;
+  line-height: 2em;
+  letter-spacing: 0.1em;
+
+}
+
+div.pergunta3 p{
+  color: #bdc3c7;
+}
+
+div.pergunta3 p.pergunta3{
+  color: #bdc3c7;
+  font-size: 6vw;
+  letter-spacing: 0.1em;
+  line-height: 2em;
+  margin-top: 10vw;
+
+}
+
+div.pergunta3 label.plan{
+  color: #bdc3c7;
+  font-size: 6vw;
+  letter-spacing: 0.1em;
+  line-height: 2em;
+  margin-top: 7vw;
+  display: block;
+
+}
+
+
+
+/*urano plutao e netuno*/
+div.pergunta4{
+  display: none;
+  color: black;
+  font-size: 2em;
+  letter-spacing: 0.1em;
+  text-align: center;
+  font-family: futura;
+
+
+}
+
+div.pergunta4 h1{
+  color: #bdc3c7;
+  text-align: center;
+  font-size: 2em;
+  line-height: 2em;
+  letter-spacing: 0.1em;
+
+}
+
+div.pergunta4 p{
+  color: #bdc3c7;
+
+}
+
+div.pergunta4 p.pergunta4{
+  color: #bdc3c7;
+  font-size: 6vw;
+  letter-spacing: 0.1em;
+  line-height: 2em;
+  margin-top: 10vw;
+
+}
+
+div.pergunta4 label.plan{
+ font-size: 6vw;
+ letter-spacing: 0.1em;
+ line-height: 2em;
+ margin-top: 7vw;
+ display: block;
+
+}
+
+div.pergunta4 img{
+  border-radius: 50%;
+  width: 20vw;
+  height: 20vw;
+  box-shadow: 0 0 30vw rgba(255,255,255,0.3);
+  margin: 0 8vw 15vw 2vw;
+
+}
+
+div.pergunta4 ul{
+  display: flex;
+  width: 70%;
+  flex-wrap: wrap;
+  margin: 10vw 20vw 10vw 25vw;
+
+
+}
+
+div.final{
+  color: white;
+  font-size: 2em;
+  letter-spacing: 0.1em;
+  text-align: center;
+  font-family: futura;
+
+
+}
+
+div.final h1{
+  color: #bdc3c7;
+  text-align: center;
+  font-size: 1em;
+  line-height: 2em;
+  letter-spacing: 0.1em;
+  margin-top: 20vw;
+
+}
+
+div.final p{
+  color: #bdc3c7;
+  font-size: 1em;
+  letter-spacing: 0.1em;
+  line-height: 3em;
+  margin-top: 15vw;
+  margin: 0 5vw 0 5vw;
+}
+
+button.reiniciar{
+  border-radius: 10px;
+  padding: 2.5vw 3vw 2.5vw 3vw;
+  background: none;
+  color: #bdc3c7;
+  font-size: 5vw;
+  margin-top: 7vw;
+}
+
+
+
+
+
